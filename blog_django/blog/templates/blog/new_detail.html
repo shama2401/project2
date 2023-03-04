@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+
+<div class="conteiner">
+    <p>Категория {{ one_new.category_id }}</p>
+    <h1>{{ one_new.title }}</h1>
+    <p>{{ one_new.content }}</p>
+    <img src="{{ one_new.image.url }}" alt="" width="350">
+    <p>Просмотры: {{ one_new.views }}</p>
+    <p>Публикация была создана {{ one_new.created }}</p>
+</div>
+{% endblock content %}

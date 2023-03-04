@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+  <form method="post">
+  <div class="mb-3">
+    <label for="word" class="form-label">Word</label>
+    <input type="text" class="form-control" id="word" aria-describedby="word" name="word" value="{{data.word}}">
+  </div>
+
+    <div class="mb-3">
+    <label for="word_upd" class="form-label">Word for update</label>
+    <input type="text" class="form-control" id="for_update" aria-describedby="word_upd" name="word_upd" value="{{data.translate}}">
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+</div>
+
+
+
+
+
+{% endblock %}

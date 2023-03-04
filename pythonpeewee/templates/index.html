@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for word in words %}
+<div class="container">
+    <h3>{{ word.id }}</h3>
+    <h5>{{ word.word }}</h5>
+    <h5>{{ word.translate }}</h5>
+    <a href="/delete/{{ word.id }}">Удалить</a>
+<br>
+<hr>
+</div>
+
+
+{% endfor %}
+
+
+{% endblock %}

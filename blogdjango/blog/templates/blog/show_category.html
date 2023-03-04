@@ -1,0 +1,38 @@
+{% load news_tags %}
+
+<div class="list-group">
+    {% for item in show_category %}
+    <a href="{{ item.get_absolute_url }}">
+        {{ item.title }} - {{ item.cnt }}
+    </a>
+    {% endfor %}
+
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card">
+
+
+    {% for news in newss %}
+    {% if news.image %}
+  <img src="{{ news.image.url }}" width="250" class="card-img-top" alt="...">
+    {% else %}
+    <img src="https://imgs.search.brave.com/JJBrb6riQSkLmBRNJLvGzBiaZiQQKgpXtf8AGYkvMU4/rs:fit:691:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC42/V1FwSkM1N25ueU93/VGZVb0lNcFJRSGFG/RiZwaWQ9QXBp" alt="" width="200">
+    {% endif %}
+        <div class="card-body">
+    <a href="{{ news.get_absolute_url }}"><h5 class="card-title">{{ news.title }}</h5></a>
+    <p class="card-text">{{ news.content|safe|linebreaks|truncatewords:10 }}</p>
+        <p class="card-text">{{ news.created|date:"d-M-Y H:i:s" }}</p>
+            <p class="card-text">{{ news.category_id }}</p>
+    <p class="card-text">{{ news.views }}</p>
+      <a href="/update_news/{{ news.id }}" class="btn btn-primary">Редактировать</a>
+      <a href="/delete_news/{{ news.id }}" class="btn btn-danger">Удалить</a>
+  </div>
+       <br>
+    {% endfor %}
+
+</div>
+
+
+

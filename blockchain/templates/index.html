@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{{ url_for('index') }}" method="post">
+  <div class="mb-3">
+    <label for="creditor" class="form-label">Кредитор</label>
+    <input type="text" class="form-control" id="creditor" aria-describedby="creditor" name="creditor" value="{{ request.form.get('creditor', '') }}">
+  </div>
+  <div class="mb-3">
+    <label for="amount" class="form-label">Сумма</label>
+    <input type="text" class="form-control" id="amount" aria-describedby="amount" name="amount" value="{{ request.form.get('amount', '') }}">
+  </div>
+  <div class="mb-3">
+    <label for="borrower" class="form-label">Заемщик</label>
+    <input type="text" class="form-control" id="borrower" aria-describedby="borrower" name="borrower" value="{{ request.form.get('borrower', '') }}">
+  </div>
+  <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+{% endblock content %}
+{% block checking %}
+
+
+    <div class="container">
+        {% for r in res %}
+        <h3>{{ r['block'] }}</h3> :: <h3>{{ r['res'] }}</h3>
+        {% endfor %}
+
+    </div>
+
+{% endblock checking %}

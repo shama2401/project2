@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+  <form method="post">
+  <div class="mb-3">
+    <label for="word" class="form-label">Word</label>
+    <input type="text" class="form-control" id="word" aria-describedby="word" name="word">
+  </div>
+
+    <div class="mb-3">
+    <label for="translate" class="form-label">Translate</label>
+    <input type="text" class="form-control" id="translate" aria-describedby="translate" name="translate">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+
+
+
+
+
+{% endblock %}

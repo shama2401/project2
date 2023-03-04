@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% for l in list_episodes %}
+
+<a href="/episode_view/{{ l.id }}"><h3>{{ l.id }}</h3></a>
+<h3>{{ l.anime.title }}</h3>
+
+{% endfor %}
+
+
+{% endblock %}

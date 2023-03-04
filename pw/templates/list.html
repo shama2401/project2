@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% for l in list_anime %}
+
+<a href="/list-episodes/{{l.id}}"><h3>{{ l.title }}</h3></a>
+<img src="{{ l.poster }}" alt="">
+<h>{{ l.description }}</h>
+
+{% endfor %}
+
+
+{% endblock %}

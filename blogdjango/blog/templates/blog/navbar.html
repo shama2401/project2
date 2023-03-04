@@ -1,0 +1,54 @@
+{% load static %}
+<nav class="navbar bg-dark" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{%url 'show_news'%}">Kloop2</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   <section class="nav_section">
+    <div class="container">
+      <div class="custom_nav2">
+        <nav class="navbar navbar-expand custom_nav-container ">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex  flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+          <a class="nav-link active" aria-current="page" href="#">Новости</a>
+<!--        </li>-->
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Истории</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Видео</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Дата</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Школа</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Спутник</a>
+        </li>
+       {%block content%}
+          {% endblock %}
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</div>
+<br>
+<div class="container">
+  <a href="{% url 'create_news' %}"><button type="button" class="btn btn-primary">Добавить новость</button></a>
+  <br>
+</div>

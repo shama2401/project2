@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+<br>
+
+        {% block category %}
+        {% endblock category %}
+<!--          <li class="nav-item">-->
+<!--          <a class="nav-link active" aria-current="page" href="#">Истории</a>-->
+<!--        </li>-->
+<!--          <li class="nav-item">-->
+<!--          <a class="nav-link active" aria-current="page" href="#">Видео</a>-->
+<!--        </li>-->
+<!--          <li class="nav-item">-->
+<!--          <a class="nav-link active" aria-current="page" href="#">Дата</a>-->
+<!--        </li>-->
+<!--          <li class="nav-item">-->
+<!--          <a class="nav-link active" aria-current="page" href="#">Школа</a>-->
+<!--        </li>-->
+<!--          <li class="nav-item">-->
+<!--          <a class="nav-link active" aria-current="page" href="#">Спутник</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link" href="#">Link</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item dropdown">-->
+<!--          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Dropdown-->
+<!--          </a>-->
+<!--          <ul class="dropdown-menu">-->
+<!--            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--            <li><hr class="dropdown-divider"></li>-->
+<!--            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link disabled">Disabled</a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<br>
+</div>
+<div class="container">
+ {% include 'blog/navbar.html' %}
+    {% include 'blog/sidebar.html' %}
+</div>
+
+
+<div class="container">
+  <div class="container mt-3">
+    <div class="row">
+      {% block sidebar %}
+        SIDEBAR
+      {% endblock sidebar %}
+
+
+      {% block content %}
+        content
+      {% endblock content %}
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+</body>
+</html>
